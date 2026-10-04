@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f" />
+      <stop offset="100%" stop-color="#451a03" />
+    </linearGradient>
+    <linearGradient id="beamGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#522504" />
+      <stop offset="100%" stop-color="#2d1302" />
+    </linearGradient>
+    <linearGradient id="upperBeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fed7aa" />
+      <stop offset="50%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+    <linearGradient id="lowerBeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fdba74" />
+      <stop offset="50%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#9a3412" />
+    </linearGradient>
+    <linearGradient id="accentBeadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1e40af" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-opacity="0.35" />
+    </filter>
+    <filter id="beadShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded canvas -->
+  <rect width="512" height="512" rx="100" fill="#0f172a" />
+
+  <!-- Abacus outer frame -->
+  <g filter="url(#shadow)">
+    <rect x="56" y="76" width="400" height="360" rx="16" fill="url(#frameGrad)" stroke="#9a3412" stroke-width="4" />
+    <rect x="76" y="96" width="360" height="320" rx="8" fill="#1e293b" />
+    
+    <!-- 5 Rods (Metal rods) -->
+    <!-- Rod 1 -->
+    <rect x="111" y="96" width="6" height="320" fill="#94a3b8" />
+    <!-- Rod 2 -->
+    <rect x="183" y="96" width="6" height="320" fill="#94a3b8" />
+    <!-- Rod 3 (Center) -->
+    <rect x="253" y="96" width="6" height="320" fill="#cbd5e1" />
+    <!-- Rod 4 -->
+    <rect x="323" y="96" width="6" height="320" fill="#94a3b8" />
+    <!-- Rod 5 -->
+    <rect x="395" y="96" width="6" height="320" fill="#94a3b8" />
+
+    <!-- Center beam / Reckoning bar -->
+    <rect x="72" y="196" width="368" height="24" fill="url(#beamGrad)" stroke="#9a3412" stroke-width="1.5" />
+    <!-- Reckoning unit dots on beam -->
+    <circle cx="186" cy="208" r="4" fill="#ffffff" />
+    <circle cx="256" cy="208" r="4.5" fill="#facc15" />
+    <circle cx="326" cy="208" r="4" fill="#ffffff" />
+
+    <!-- Upper beads (Heaven beads - bi-conical diamond profile) -->
+    <!-- Rod 1: up (inactive) -->
+    <polygon points="114,106 142,122 114,138 86,122" fill="url(#upperBeadGrad)" filter="url(#beadShadow)" />
+    <!-- Rod 2: down (active = 5) -->
+    <polygon points="186,162 214,178 186,194 158,178" fill="url(#upperBeadGrad)" filter="url(#beadShadow)" />
+    <!-- Rod 3: down (active = 5) -->
+    <polygon points="256,162 284,178 256,194 228,178" fill="url(#accentBeadGrad)" filter="url(#beadShadow)" />
+    <!-- Rod 4: up (inactive) -->
+    <polygon points="326,106 354,122 326,138 298,122" fill="url(#upperBeadGrad)" filter="url(#beadShadow)" />
+    <!-- Rod 5: down (active = 5) -->
+    <polygon points="398,162 426,178 398,194 370,178" fill="url(#upperBeadGrad)" filter="url(#beadShadow)" />
+
+    <!-- Lower beads (Earth beads - 4 beads per rod) -->
+    <!-- Rod 1: 2 active (up) + 2 inactive (down) -->
+    <polygon points="114,222 142,238 114,254 86,238" fill="url(#lowerBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="114,256 142,272 114,288 86,272" fill="url(#lowerBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="114,348 142,364 114,380 86,364" fill="url(#lowerBeadGrad)" opacity="0.9" />
+    <polygon points="114,382 142,398 114,414 86,398" fill="url(#lowerBeadGrad)" opacity="0.9" />
+
+    <!-- Rod 2: 3 active (up) + 1 inactive (down) -->
+    <polygon points="186,222 214,238 186,254 158,238" fill="url(#lowerBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="186,256 214,272 186,288 158,272" fill="url(#lowerBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="186,290 214,306 186,322 158,306" fill="url(#lowerBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="186,382 214,398 186,414 158,398" fill="url(#lowerBeadGrad)" opacity="0.9" />
+
+    <!-- Rod 3: 4 active (up, total 9) -->
+    <polygon points="256,222 284,238 256,254 228,238" fill="url(#accentBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="256,256 284,272 256,288 228,272" fill="url(#accentBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="256,290 284,306 256,322 228,306" fill="url(#accentBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="256,324 284,340 256,356 228,340" fill="url(#accentBeadGrad)" filter="url(#beadShadow)" />
+
+    <!-- Rod 4: 1 active (up) + 3 inactive -->
+    <polygon points="326,222 354,238 326,254 298,238" fill="url(#lowerBeadGrad)" filter="url(#beadShadow)" />
+    <polygon points="326,314 354,330 326,346 298,330" fill="url(#lowerBeadGrad)" opacity="0.9" />
+    <polygon points="326,348 354,364 326,380 298,364" fill="url(#lowerBeadGrad)" opacity="0.9" />
+    <polygon points="326,382 354,398 326,414 298,398" fill="url(#lowerBeadGrad)" opacity="0.9" />
+
+    <!-- Rod 5: 0 active, 4 inactive -->
+    <polygon points="398,280 426,296 398,312 370,296" fill="url(#lowerBeadGrad)" opacity="0.9" />
+    <polygon points="398,314 426,330 398,346 370,330" fill="url(#lowerBeadGrad)" opacity="0.9" />
+    <polygon points="398,348 426,364 398,380 370,364" fill="url(#lowerBeadGrad)" opacity="0.9" />
+    <polygon points="398,382 426,398 398,414 370,398" fill="url(#lowerBeadGrad)" opacity="0.9" />
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+{
+  "name": "Abacus & Long Division Tutor",
+  "description": "Interactive Soroban abacus learning app featuring basic arithmetic, long division tutor, step-by-step beginner guides, offline accessibility, and visual progress analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
